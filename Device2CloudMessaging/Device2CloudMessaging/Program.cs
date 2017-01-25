@@ -16,8 +16,8 @@ namespace Device2CloudMessaging
 {
     public class Program
     {
-        static string connectionString = "HostName=Evolve-IOT-HUB-POC.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=ciKPBNtS30j3C17/spYpp2Kt1D3RqNxddGOLY/w4SWA=";
-        static string deviceName = "Device2";
+        static string connectionString = "YOUR CONNECTION STRING";
+        static string deviceName = "DEVICE NAME";
        
         static void Main(string[] args)
         {
