@@ -11,7 +11,7 @@ namespace ServiceSideApp
     class Program
     {
         static RegistryManager registryManager;
-        static string connectionString = "HostName=Evolve-IOT-HUB-POC.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=ciKPBNtS30j3C17/spYpp2Kt1D3RqNxddGOLY/w4SWA=";
+        static string connectionString = "CONNECTION STRING";
 
         public static async Task AddTagsAndQuery()
         {
