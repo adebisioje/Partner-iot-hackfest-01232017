@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ServiceSideApp")]
+[assembly: AssemblyTitle("DeviceTwins_dotNet")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ServiceSideApp")]
+[assembly: AssemblyProduct("DeviceTwins_dotNet")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2c82606e-195b-4a05-b92c-0c0762552512")]
+[assembly: Guid("eaabc3f5-ae8a-47ce-9267-053e4af704ce")]
 
 // Version information for an assembly consists of the following four values:
 //

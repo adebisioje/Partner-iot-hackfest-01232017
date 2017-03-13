@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Azure.Devices.Client;
-using Microsoft.Azure.Devices;
 using Newtonsoft.Json;
-using System.Collections;
-using System.Timers;
 using System.Net.WebSockets;
-using Microsoft.Azure.Devices.Shared;
 
 namespace Device2CloudMessaging
 {
