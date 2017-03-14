@@ -4,13 +4,14 @@ using System.Threading.Tasks;
 using Microsoft.Azure.Devices.Client;
 using Newtonsoft.Json;
 using System.Net.WebSockets;
+using System.Configuration;
 
 namespace Device2CloudMessaging
 {
     public class Program
     {
-        static string connectionString = "HostName=adojeiothub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=83Gfbj8wfjsErg+2Fihv5gLuEFHz4YX8pT0wsoZNGn4=";
-        static string deviceName = "mySuperStar";
+        static string connectionString = ConfigurationManager.AppSettings["connectionString"];
+        static string deviceName = ConfigurationManager.AppSettings["deviceName"];
 
         static void Main(string[] args)
         {
@@ -62,20 +63,17 @@ namespace Device2CloudMessaging
 
         }
 
-        //Sending sample telemry data 
+        //Sending sample telemetry data 
         private static async void SendDeviceToCloudMessagesAsync(DeviceClient client)
         {
             try
             {
-
-                double avgWindSpeed = 10; // m/s
-                Random rand = new Random();
-                double currentWindSpeed = avgWindSpeed + rand.NextDouble() * 4 - 2;
+                var currentBathroomLightState = false;
 
                 var telemetryDataPoint = new
                 {
                     deviceId = "mySuperStar",
-                    windSpeed = currentWindSpeed
+                    bathroomLightState = currentBathroomLightState
                 };
                 var messageString = JsonConvert.SerializeObject(telemetryDataPoint);
                 var message = new Message(Encoding.ASCII.GetBytes(messageString));
@@ -85,7 +83,7 @@ namespace Device2CloudMessaging
                 Console.WriteLine("{0} > Sending message: {1}", DateTime.Now, messageString);
 
                 Task.Delay(1000).Wait();
-                //}
+   
             }
             catch (WebSocketException)
             {

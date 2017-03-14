@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Text;
+using System.Configuration;
 using System.Threading.Tasks;
 using Microsoft.Azure.Devices.Client;
 using Microsoft.Azure.Devices.Shared;
@@ -10,9 +10,8 @@ namespace DeviceTwins_dotNet
     class Program
     {
 
-        static string connectionString = "HostName=adojeiothub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=83Gfbj8wfjsErg+2Fihv5gLuEFHz4YX8pT0wsoZNGn4=";
-        static string deviceName = "mySuperStar";
-        static bool occupied = false;
+        static string connectionString = ConfigurationManager.AppSettings["connectionString"];
+        static string deviceName = ConfigurationManager.AppSettings["deviceName"];
         static DeviceClient client = null;
 
 
@@ -47,17 +46,16 @@ namespace DeviceTwins_dotNet
             Console.WriteLine("initial twin value received:");
             Console.WriteLine(JsonConvert.SerializeObject(twin));
 
-            while (true)
-            {
+            //while (true)
+           // {
                 UpdateLightState().Wait();
                 System.Threading.Thread.Sleep(5000);
-                //Wait(5000);
-            }
+           // }
 
-           // Console.ReadLine();
+            Console.ReadLine();
         }
 
-
+        // Updates the bathroomlight to true
         static async Task UpdateLightState()
         {
             var twinTask = client.GetTwinAsync();
@@ -65,12 +63,12 @@ namespace DeviceTwins_dotNet
             var twin = twinTask.Result;
 
             TwinCollection reportedProperties = new TwinCollection();
-            var lightState = false;
+            var lightState = true;
 
-            if (twin.Properties.Reported.Contains("bathroom-light"))
-            {
-                lightState = !(bool)twin.Properties.Reported["bathroom-light"];
-            }
+            //if (twin.Properties.Reported.Contains("bathroom-light"))
+            //{
+                //lightState = !(bool)twin.Properties.Reported["bathroom-light"];
+            //}
 
             reportedProperties["bathroom-light"] = lightState;
 
