@@ -16,10 +16,6 @@ import java.util.UUID;
 
 /**
 
- * Device Twin Sample for an IoT Hub. Default protocol is to use
-
- * MQTT transport.
-
  */
 public class App 
 {
@@ -69,9 +65,9 @@ public class App
             System.out.println("Starting to device Twin...");
 
             //set desired properties 
-            homeKit.setDesiredPropertyCallback(new Property("LivingRoomLights", null), homeKit, null);
+            homeKit.setDesiredPropertyCallback(new Property("bathroom-light", null), homeKit, null);
             //setting reported properties 
-            homeKit.setReportedProp(new Property("LivingRoomLights", LIGHTS.ON));
+            homeKit.setReportedProp(new Property("bathroom-light", LIGHTS.ON));
 
 
             client.sendReportedProperties(homeKit.getReportedProp());
