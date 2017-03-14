@@ -2,7 +2,8 @@
 
 This folder contains code that was created while hacking with an IOT Partner 
 
-* Problem Statement - How might we, using Azure IOT hubs, solve connectivity issues when sending the state of devices to Azure 
+## Problem Statement 
+    How might we, using Azure IOT hubs, solve connectivity issues when sending the state of devices to Azure 
 
 Code
 DeviceToCloudMessaging waits for a message from Azure before sending a device state message back to the cloud. When there is an interruption in the network connection, no messages are sent. Howvere, when the device is back "online" it gets back on the same thread, waits to get a message from the cloud and then sends the state of the device. 
