@@ -3,7 +3,7 @@
 This folder contains code that was created while hacking with an IOT Partner 
 
 ## Problem Statement 
-    How might solve connectivity issues when sending the state of devices to Azure? 
+    How might we solve connectivity issues when sending the state of devices to Azure? 
 ## Solution
     Using Azure IOT Hubs 
     
