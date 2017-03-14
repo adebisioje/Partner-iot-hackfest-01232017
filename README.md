@@ -1,4 +1,4 @@
-# Partner-iot-hackfest-01232017
+# Partner-iot-hackfest-01/23/2017
 
 This folder contains code that was created while hacking with an IOT Partner 
 
