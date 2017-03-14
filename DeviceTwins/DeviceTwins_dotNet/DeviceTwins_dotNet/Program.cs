@@ -5,7 +5,7 @@ using Microsoft.Azure.Devices.Client;
 using Microsoft.Azure.Devices.Shared;
 using Newtonsoft.Json;
 
-namespace DeviceTwins_dotNet
+namespace DeviceTwinsClient
 {
     class Program
     {
