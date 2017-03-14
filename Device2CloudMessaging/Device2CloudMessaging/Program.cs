@@ -21,7 +21,7 @@ namespace Device2CloudMessaging
         static async Task MainAsync()
         {
             Console.WriteLine("Getting device from connection string");
-            var client = DeviceClient.CreateFromConnectionString(connectionString, deviceName, Microsoft.Azure.Devices.Client.TransportType.Mqtt);
+            var client = DeviceClient.CreateFromConnectionString(connectionString, deviceName, TransportType.Mqtt); // Use Mqtt messaging
 
             while (true)
             {
@@ -30,9 +30,9 @@ namespace Device2CloudMessaging
             }
         }
 
-        // To solve the internet connection issue: We created a CheckMessages Method that continues to check for messages to keep the thread
+        // CheckMessages method continues to check for messages to keep the thread
         // open even after a network connection is lost. You only send a message after you have recieved a message from the cloud to know that
-        // the connection is alive and working 
+        // the connection is alive and working. Because we are leveraging MQTT messaging, one the device is back online, it gets back on the same thread
         static async void CheckMessages(DeviceClient client)
         {
             try

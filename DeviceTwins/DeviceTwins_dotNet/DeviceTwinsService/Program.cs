@@ -30,12 +30,12 @@ namespace DeviceTwinsService
         {
 
             registryManager = RegistryManager.CreateFromConnectionString(connectionString);
-            //while (true)
-            //{
+            while (true)
+            {
                AddTagsAndQuery().Wait();
-               System.Threading.Thread.Sleep(5000);
+               System.Threading.Thread.Sleep(50000);
 
-            //}
+            }
            Console.WriteLine("Press Enter to exit.");
            Console.ReadLine();
 

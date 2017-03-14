@@ -46,11 +46,11 @@ namespace DeviceTwinsClient
             Console.WriteLine("initial twin value received:");
             Console.WriteLine(JsonConvert.SerializeObject(twin));
 
-            //while (true)
-           // {
+           while (true)
+           {
                 UpdateLightState().Wait();
-                System.Threading.Thread.Sleep(5000);
-           // }
+                System.Threading.Thread.Sleep(50000);
+            }
 
             Console.ReadLine();
         }
@@ -65,10 +65,10 @@ namespace DeviceTwinsClient
             TwinCollection reportedProperties = new TwinCollection();
             var lightState = true;
 
-            //if (twin.Properties.Reported.Contains("bathroom-light"))
-            //{
-                //lightState = !(bool)twin.Properties.Reported["bathroom-light"];
-            //}
+            if (twin.Properties.Reported.Contains("bathroom-light"))
+            {
+                lightState = !(bool)twin.Properties.Reported["bathroom-light"];
+            }
 
             reportedProperties["bathroom-light"] = lightState;
 
