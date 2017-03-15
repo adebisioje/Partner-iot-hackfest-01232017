@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "Voting", "Voting\Voting.sfproj", "{CF9D7803-843C-402E-B043-C209B090F36D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VotingService", "VotingService\VotingService.csproj", "{33A0553F-A654-4531-8A1C-2DC9771D1D0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF9D7803-843C-402E-B043-C209B090F36D}.Debug|x64.ActiveCfg = Debug|x64
+		{CF9D7803-843C-402E-B043-C209B090F36D}.Debug|x64.Build.0 = Debug|x64
+		{CF9D7803-843C-402E-B043-C209B090F36D}.Debug|x64.Deploy.0 = Debug|x64
+		{CF9D7803-843C-402E-B043-C209B090F36D}.Release|x64.ActiveCfg = Release|x64
+		{CF9D7803-843C-402E-B043-C209B090F36D}.Release|x64.Build.0 = Release|x64
+		{CF9D7803-843C-402E-B043-C209B090F36D}.Release|x64.Deploy.0 = Release|x64
+		{33A0553F-A654-4531-8A1C-2DC9771D1D0E}.Debug|x64.ActiveCfg = Debug|x64
+		{33A0553F-A654-4531-8A1C-2DC9771D1D0E}.Debug|x64.Build.0 = Debug|x64
+		{33A0553F-A654-4531-8A1C-2DC9771D1D0E}.Release|x64.ActiveCfg = Release|x64
+		{33A0553F-A654-4531-8A1C-2DC9771D1D0E}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

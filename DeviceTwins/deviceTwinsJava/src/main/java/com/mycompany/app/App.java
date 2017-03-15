@@ -23,7 +23,7 @@ public class App
      private static IotHubClientProtocol protocol = IotHubClientProtocol.MQTT;
      private static String deviceId = "mySuperStar";
      private static DeviceClient client;
-       private enum LIGHTS{ ON, OFF, DISABLED }
+      // private enum LIGHTS{ true, false, DISABLED }
        
        protected static class DeviceTwinStatusCallBack implements IotHubEventCallback{
         public void execute(IotHubStatusCode status, Object context){
@@ -61,29 +61,34 @@ public class App
         {
             client.open();
             System.out.println("Opened connection to IoT Hub.");
+         
             client.startDeviceTwin(new DeviceTwinStatusCallBack(), null, homeKit, null);
             System.out.println("Starting to device Twin...");
 
-            //set desired properties 
+            //desired properties 
             homeKit.setDesiredPropertyCallback(new Property("bathroom-light", null), homeKit, null);
-            //setting reported properties 
-            homeKit.setReportedProp(new Property("bathroom-light", LIGHTS.ON));
-
+            
+            
+            //set the reported light state
+            homeKit.setReportedProp(new Property("bathroom-light", true));
 
             client.sendReportedProperties(homeKit.getReportedProp());
             System.out.println("Sending reported properties...");
 
-            //set the properties to the desired properties
+           
+        
             client.subscribeToDesiredProperties(homeKit.getDesiredProp());
-            System.out.println("Waiting for Desired properties");
-            //homeKit    
-
+           System.out.println("Waiting for Desired properties");
+         
         }catch(Exception e){
             System.out.println("On exception, shutting down \n" + " Cause: " + e.getCause() + " \n" +  e.getMessage());
             homeKit.clean();
             client.close();
             System.out.println("Shutting down...");
         }
+        homeKit.clean();
+        client.close();
 
+        System.out.println("Shutting down...");
     }
 }
