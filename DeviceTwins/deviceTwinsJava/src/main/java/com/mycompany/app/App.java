@@ -23,7 +23,6 @@ public class App
      private static IotHubClientProtocol protocol = IotHubClientProtocol.MQTT;
      private static String deviceId = "mySuperStar";
      private static DeviceClient client;
-      // private enum LIGHTS{ true, false, DISABLED }
        
        protected static class DeviceTwinStatusCallBack implements IotHubEventCallback{
         public void execute(IotHubStatusCode status, Object context){
@@ -67,6 +66,7 @@ public class App
 
             //desired properties 
             homeKit.setDesiredPropertyCallback(new Property("bathroom-light", null), homeKit, null);
+       
             
             
             //set the reported light state
