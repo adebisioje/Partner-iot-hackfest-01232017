@@ -28,14 +28,14 @@ public class App
        .getFeedbackReceiver(deviceId);
      if (feedbackReceiver != null) feedbackReceiver.open();
 
-     Message messageToSend = new Message("Cloud to device message. GATCHA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+     Message messageToSend = new Message("Ping");
      messageToSend.setDeliveryAcknowledgement(DeliveryAcknowledgement.Full);
 
      serviceClient.send(deviceId, messageToSend);
      System.out.println("Message sent to device");
 
      FeedbackBatch feedbackBatch = feedbackReceiver.receive();
-     System.out.println("I am now here");
+     //System.out.println("I am now here");
      /** 
      if (feedbackBatch != null) {
        System.out.println("Message feedback received, feedback time: "
