@@ -1,0 +1,6 @@
+﻿SELECT
+    *
+INTO
+    [YourOutputAlias_New]
+FROM
+    [YourInputAlias]

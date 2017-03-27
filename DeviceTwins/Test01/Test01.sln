@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E6C563F2-BDC2-4A24-ACBF-01715157DCBB}") = "Test01", "Test01\Test01.asaproj", "{BE5B16AA-05AE-4FFC-AE4F-4036B35EC4CC}"
+EndProject
+Project("{E6C563F2-BDC2-4A24-ACBF-01715157DCBB}") = "streamjob01", "streamjob01\streamjob01.asaproj", "{EAFE632F-5732-47C8-BC62-9ACEEDBFF7CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE5B16AA-05AE-4FFC-AE4F-4036B35EC4CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE5B16AA-05AE-4FFC-AE4F-4036B35EC4CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE5B16AA-05AE-4FFC-AE4F-4036B35EC4CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE5B16AA-05AE-4FFC-AE4F-4036B35EC4CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAFE632F-5732-47C8-BC62-9ACEEDBFF7CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAFE632F-5732-47C8-BC62-9ACEEDBFF7CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAFE632F-5732-47C8-BC62-9ACEEDBFF7CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAFE632F-5732-47C8-BC62-9ACEEDBFF7CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
