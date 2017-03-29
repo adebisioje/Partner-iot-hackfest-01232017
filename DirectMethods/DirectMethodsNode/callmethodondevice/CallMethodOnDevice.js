@@ -4,7 +4,7 @@
 
 
  var connectionString = 'HostName=adojeiothub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=83Gfbj8wfjsErg+2Fihv5gLuEFHz4YX8pT0wsoZNGn4=';
- var methodName = 'writeLine';
+ var methodName = 'turnLightBulbON';
  var deviceId = 'mySuperStar';
 
 

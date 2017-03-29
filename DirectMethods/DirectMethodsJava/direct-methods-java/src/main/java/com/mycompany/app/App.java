@@ -12,10 +12,11 @@ import java.util.Scanner;
  */
 public class App 
 {
-   private static final int METHOD_SUCCESS = 200;
+    private static final int METHOD_SUCCESS = 200;
     private static final int METHOD_HUNG = 300;
     private static final int METHOD_NOT_FOUND = 404;
     private static final int METHOD_NOT_DEFINED = 404;
+    private static String LIGHTBULB_STATUS = "OFF";
 
     private static int method_default(Object data)
     {
@@ -27,6 +28,14 @@ public class App
     private static int method_writeLine(Object command)
     {
         System.out.println("Hello World! - I am writing a line");
+        return METHOD_SUCCESS;
+    
+    }
+
+      private static int method_turnLightBulbON(Object command)
+    {
+        LIGHTBULB_STATUS = "ON";
+        System.out.println("Lightbulb turned: " + LIGHTBULB_STATUS);
         return METHOD_SUCCESS;
     
     }
@@ -51,6 +60,11 @@ public class App
                case "writeLine" :
                 {
                     int status = method_writeLine(methodData);
+                    deviceMethodData = new DeviceMethodData(status, "executed " + methodName);
+                    break;
+                } case "turnLightBulbON":
+                {
+                    int status = method_turnLightBulbON(methodData);
                     deviceMethodData = new DeviceMethodData(status, "executed " + methodName);
                     break;
                 }
