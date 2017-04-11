@@ -1,8 +1,9 @@
 package com.mycompany.app;
 
- import com.microsoft.azure.iot.service.sdk.*;
+import com.microsoft.azure.sdk.iot.service.*;
  import java.io.IOException;
  import java.net.URISyntaxException;
+ 
 
 
 /**
@@ -13,8 +14,8 @@ public class App
 {
  
 
- private static final String connectionString = "HostName=iothubevolve272f2.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=E0jHdIVmdq8xgAOJkk6ezhf/dNXWhiQHh378/wF+x6M=";
- private static final String deviceId = "ROCM";
+ private static final String connectionString = "HostName=adojeiothub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=83Gfbj8wfjsErg+2Fihv5gLuEFHz4YX8pT0wsoZNGn4=";
+ private static final String deviceId = "mySuperStar";
  private static final IotHubServiceClientProtocol protocol = IotHubServiceClientProtocol.AMQPS;
 
      public static void main(String[] args) throws IOException,

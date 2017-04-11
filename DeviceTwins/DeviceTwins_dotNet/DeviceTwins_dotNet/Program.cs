@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using Microsoft.Azure.Devices.Client;
 using Microsoft.Azure.Devices.Shared;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.IO;
 
 namespace DeviceTwinsClient
 {
@@ -75,6 +77,7 @@ namespace DeviceTwinsClient
             Console.WriteLine("Setting Light State: {0}", reportedProperties["bathroom-light"]);
             await client.UpdateReportedPropertiesAsync(reportedProperties);
         }
+
     }
 }
 

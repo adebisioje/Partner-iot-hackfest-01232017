@@ -2,23 +2,27 @@
  var Client = require('azure-iot-device').Client;
  var Protocol = require('azure-iot-device-mqtt').Mqtt;
 
- var connectionString = 'HostName=adojesuite3d629.azure-devices.net;DeviceId=ROCM;SharedAccessKey=IpHwheSPXPG4V75m+QB22A==';
+ var connectionString = 'HostName=adojeiothub.azure-devices.net;DeviceId=mySuperStar;SharedAccessKey=EzdMDrc9TfQKP22LMC8mhg==';
  var client = Client.fromConnectionString(connectionString, Protocol);
 
  client.open(function(err) {
  if (err) {
-     console.error('could not open IotHub client');
+     console.error('could not open IotHub client' + err);
  }  else {
      console.log('client opened');
 
      client.getTwin(function(err, twin) {
      if (err) {
-         console.error('could not get twin');
+         console.log(err.message);
+         console.error('could not get twin' + err.message);
+        
      } else {
+      
          var patch = {
-             connectivity: {
+            connectivity: {
                  type: 'cellular'
-             }
+         }
+
          };
 
          twin.properties.reported.update(patch, function(err) {
