@@ -19,7 +19,7 @@ This does the following:
 4) Using Device Methods, turn the bathroom-light of the homekit device to "ON"
 
          To build the class execute - mvn clean package -DskipTests
-         To run the call execute  - mvn exec:java -Dexec.mainClass="com.mycompany.app.App"
+         To run the class execute  - mvn exec:java -Dexec.mainClass="com.mycompany.app.App"
          
 ### Step 3: Notice that the_device bathroom light is now turned "ON"
 Also notice that the reported state of the bathroom-light is now turned "ON"
